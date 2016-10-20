@@ -1,0 +1,45 @@
+{
+    "name": "enniel/epochta",
+    "type": "library",
+    "description": "Epochta PHP client",
+    "keywords": [
+        "epochta",
+        "sms"
+    ],
+    "homepage": "https://github.com/enniel/epochta",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Evgeni Razumov",
+            "email": "razumov.evgeni@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">=5.5.9",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "~1.12.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Enniel\\Epochta\\": "src"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@phpcs"
+        ],
+        "phpcs": "php vendor/bin/php-cs-fixer --diff --dry-run -v fix"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "suggest": {
+        "illuminate/support": "Required to use with Laravel Framework (~5.1)."
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
