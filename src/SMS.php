@@ -4,7 +4,6 @@ namespace Enniel\Epochta;
 
 use BadMethodCallException;
 use GuzzleHttp\Client;
-use GuzzleHttp\UriTemplate;
 
 class SMS
 {
@@ -119,7 +118,7 @@ class SMS
             'action'  => $action,
             'version' => self::VERSION,
         ]));
-        $uri = (new UriTemplate())->expand(self::HOST.'{/segments*}{?parameters*}', [
+        $uri = (new \GuzzleHttp\UriTemplate\UriTemplate())->expand(self::HOST.'{/segments*}{?parameters*}', [
             'segments'   => [
                 self::VERSION, $action,
             ],
